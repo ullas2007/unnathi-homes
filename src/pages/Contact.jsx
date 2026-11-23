@@ -68,12 +68,12 @@ function Contact() {
         <p>Phone: <a href="tel:+918197050233">+91 81970 50233</a></p>
         <p>WhatsApp: <a href="https://wa.me/918197050233">Chat on WhatsApp</a></p>
         <p>
-          Address: K R Extension, 4th Main Road, Near Shankar Mutt,
-          Tiptur 572201 (Plus Code: 7F7C+57)
+          Unnathi Homes Architect \u2014 K R Extension, 4th Main Road, Near
+          Shankar Mutt, Tiptur 572201 (Plus Code: 7F7C+57)
         </p>
         <iframe
           title="Unnathi Homes location map"
-          src="https://www.google.com/maps?q=7F7C%2B57+Tiptur%2C+Karnataka%2C+India&output=embed"
+          src="https://www.google.com/maps?q=Unnathi+Homes+Architect%2C+7F7C%2B57+Tiptur%2C+Karnataka%2C+India&output=embed"
           className="map-frame"
           loading="lazy"
         />
