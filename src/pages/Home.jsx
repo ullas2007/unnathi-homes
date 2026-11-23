@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+const marqueeText =
+  "Tiptur \u2022 Tumkur \u2022 Bengaluru \u2022 Hassan \u2022 G+1 Homes \u2022 Turnkey Construction \u2022 ";
+
 function Home() {
   return (
     <div>
@@ -11,7 +14,8 @@ function Home() {
             <br />
             HOM<span className="logo-accent">ES</span>
           </h1>
-          <p>We build your dreams….</p>
+          <p>We build your dreams\u2026.</p>
+          <p className="hero-sub">Turnkey homes in Tiptur, Tumkur district, Bengaluru and Hassan.</p>
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
             <a href="https://wa.me/918197050233" className="btn">WhatsApp</a>
@@ -19,6 +23,13 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <div className="marquee">
+        <div className="marquee-track">
+          <span>{marqueeText.repeat(3)}</span>
+          <span>{marqueeText.repeat(3)}</span>
+        </div>
+      </div>
 
       <section className="photos">
         <h2>Our Work</h2>
@@ -36,12 +47,12 @@ function Home() {
             <figcaption>Living room</figcaption>
           </figure>
         </div>
-        <p className="note">Sample photos for now — real photos of Unnathi Homes' work coming soon.</p>
+        <p className="note">Sample photos for now \u2014 real photos of Unnathi Homes' work coming soon.</p>
       </section>
 
       <section className="cta">
         <h2>Planning to build your home?</h2>
-        <p>Call us or send an enquiry — we will get back to you soon.</p>
+        <p>Call us or send an enquiry \u2014 we will get back to you soon.</p>
         <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
         <Link to="/contact" className="btn">Enquire Now</Link>
       </section>

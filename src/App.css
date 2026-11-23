@@ -327,3 +327,68 @@ nav .logo {
   font-weight: 800;
   letter-spacing: 0.06em;
 }
+
+/* DivyaSree-style premium touches */
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hero-overlay h1 {
+  font-family: inherit;
+}
+
+/* Pill buttons */
+.btn {
+  border-radius: 999px;
+}
+
+form button[type="submit"] {
+  border-radius: 999px;
+}
+
+/* Sticky navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Full-screen hero */
+.hero-full-img {
+  height: 100vh;
+  min-height: 500px;
+}
+
+/* Hero subtext (service area) */
+.hero-overlay .hero-sub {
+  color: #e5e7eb;
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+}
+
+/* Scrolling marquee strip */
+.marquee {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #1b2a4a;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
