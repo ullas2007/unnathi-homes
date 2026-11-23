@@ -199,6 +199,10 @@ section + section {
   cursor: pointer;
 }
 
+.btn-whatsapp {
+  background: #25d366;
+}
+
 .btn::after {
   content: " \2197";
 }
