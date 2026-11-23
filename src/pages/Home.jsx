@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <section className="hero-full">
-        <img src="/hero.jpg" alt="Modern two-storey house" className="hero-full-img" />
+        <img src="https://www.nobroker.in/blog/wp-content/uploads/2023/08/Modern-Minimalism.webp" alt="Modern two-storey house in bright daylight" className="hero-full-img" />
         <div className="hero-overlay">
           <h1>
             UNNATH<span className="logo-accent">i</span>
