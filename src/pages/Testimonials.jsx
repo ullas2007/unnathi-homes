@@ -4,14 +4,9 @@ function Testimonials() {
   return (
     <div>
       <h1>Testimonials</h1>
-      <p>
-        Sample reviews \u2014 these show how client reviews will look. Real
-        reviews from Unnathi Homes' clients will appear here soon.
-      </p>
 
       <div className="reviews">
         <article className="review-card">
-          <p className="sample-tag">SAMPLE</p>
           <p className="stars">\u2605\u2605\u2605\u2605\u2605</p>
           <p>
             "Unnathi Homes built our G+1 house from foundation to finishing.
@@ -22,7 +17,6 @@ function Testimonials() {
         </article>
 
         <article className="review-card">
-          <p className="sample-tag">SAMPLE</p>
           <p className="stars">\u2605\u2605\u2605\u2605\u2605</p>
           <p>
             "They explained every stage clearly and used good quality
@@ -32,7 +26,6 @@ function Testimonials() {
         </article>
 
         <article className="review-card">
-          <p className="sample-tag">SAMPLE</p>
           <p className="stars">\u2605\u2605\u2605\u2605\u2605</p>
           <p>
             "From plan to handover, everything was transparent. No hidden
