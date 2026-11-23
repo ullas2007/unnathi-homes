@@ -682,4 +682,15 @@ footer .footer-bottom {
     font-size: 0.95rem;
     padding: 0.7rem 1.3rem;
   }
+
+  /* On mobile, when scrolled down, show only the logo in the top bar */
+  .navbar.scrolled .nav-links,
+  .navbar.scrolled .nav-call {
+    display: none;
+  }
+
+  .navbar.scrolled {
+    min-height: 0;
+    padding: 0.5rem 1rem;
+  }
 }

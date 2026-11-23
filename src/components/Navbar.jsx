@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 60);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={"navbar" + (scrolled ? " scrolled" : "")}>
       <Link to="/" className="logo">
         <span>UNNATH<span className="logo-accent">i</span></span>
         <span>HOM<span className="logo-accent">E</span>S</span>
