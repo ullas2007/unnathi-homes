@@ -701,26 +701,20 @@ footer .footer-bottom {
     padding: 0.7rem 1.3rem;
   }
 
-  /* On mobile, when scrolled down, the links + Call button fade out gently
-     FIRST (0.3s ease-in-out), and only then does the bar collapse smoothly
-     (0.3s delay) — the text is never clipped while still visible, so the
-     hiding stays smooth with no blink. The bar itself shrinks to hug just
-     the logo: tighter padding and no gap to the hidden links. */
+  /* On mobile, when scrolled down, the links + Call button only fade out
+     (0.3s). They leave the layout only after the fade finishes (done by
+     the Navbar component), so no text is ever clipped while visible —
+     clipping the text mid-fade is what made it blink. The bar then sits
+     slim, hugging just the logo. */
   .navbar .nav-links,
   .navbar .nav-call {
-    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-    max-height: 120px;
-    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .navbar.scrolled .nav-links,
   .navbar.scrolled .nav-call {
     opacity: 0;
-    max-height: 0;
-    margin: 0;
-    padding: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out 0.3s, margin 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
   .navbar.scrolled {
