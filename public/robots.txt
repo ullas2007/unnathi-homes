@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://unnathi-homes.vercel.app/sitemap.xml

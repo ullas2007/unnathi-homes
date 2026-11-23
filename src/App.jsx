@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,10 +10,28 @@ import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import "./App.css";
 
+const TITLES = {
+  "/": "Unnathi Homes — We Build Your Dreams",
+  "/about": "About Us — Unnathi Homes",
+  "/services": "Services — Unnathi Homes",
+  "/projects": "Projects — Unnathi Homes",
+  "/gallery": "Gallery — Unnathi Homes",
+  "/testimonials": "Testimonials — Unnathi Homes",
+  "/contact": "Contact Us — Unnathi Homes",
+};
+
+function PageTitle() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    document.title = TITLES[pathname] || "Unnathi Homes — We Build Your Dreams";
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+      <PageTitle />
       <Navbar />
       <main>
         <Routes>

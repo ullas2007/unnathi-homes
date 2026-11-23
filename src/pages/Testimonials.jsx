@@ -6,18 +6,26 @@ function Testimonials() {
   const [name, setName] = useState("");
   const [place, setPlace] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [website, setWebsite] = useState("");
   const [error, setError] = useState("");
   const [saveFailed, setSaveFailed] = useState(false);
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (sending) return;
     setError("");
     setSaveFailed(false);
+    if (website.trim() !== "") {
+      setSent(true);
+      return;
+    }
     if (name.trim() === "" || feedback.trim() === "") {
       setError("Please enter your name and your feedback.");
       return;
     }
+    setSending(true);
     const { error } = await supabase.from("enquiries").insert([
       {
         name: name.trim(),
@@ -27,6 +35,7 @@ function Testimonials() {
         message: feedback.trim(),
       },
     ]);
+    setSending(false);
     if (error) {
       setError("Could not send your feedback.");
       setSaveFailed(true);
@@ -82,17 +91,23 @@ function Testimonials() {
           <form onSubmit={handleSubmit}>
             <label>
               Name *
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              <input type="text" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} />
             </label>
             <label>
               Place
-              <input type="text" value={place} onChange={(e) => setPlace(e.target.value)} />
+              <input type="text" autoComplete="off" value={place} onChange={(e) => setPlace(e.target.value)} />
             </label>
             <label>
               Your feedback *
               <textarea value={feedback} onChange={(e) => setFeedback(e.target.value)} />
             </label>
-            <button type="submit">Send Feedback</button>
+            <div className="honeypot" aria-hidden="true">
+              <label>
+                Website
+                <input type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+              </label>
+            </div>
+            <button type="submit" disabled={sending}>{sending ? "Sending..." : "Send Feedback"}</button>
             {error && <p>{error}</p>}
             {saveFailed && (
               <p>
@@ -108,7 +123,7 @@ function Testimonials() {
         <h2>Planning to build your home?</h2>
         <p>Call us and tell us about your plot.</p>
         <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
-        <Link to="/contact" className="btn">Enquire Now</Link>
+        <Link to="/contact" className="btn">Get a Free Quote</Link>
       </section>
     </div>
   );

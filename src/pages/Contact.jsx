@@ -9,14 +9,21 @@ function Contact() {
   const [plotSize, setPlotSize] = useState("");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState("");
   const [error, setError] = useState("");
   const [saveFailed, setSaveFailed] = useState(false);
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (sending) return;
     setError("");
     setSaveFailed(false);
+    if (website.trim() !== "") {
+      setSent(true);
+      return;
+    }
     if (name.trim() === "" || phone.trim() === "") {
       setError("Please enter your name and phone number.");
       return;
@@ -25,6 +32,7 @@ function Contact() {
       setError("Please enter a valid 10-digit phone number.");
       return;
     }
+    setSending(true);
     const details = [];
     if (plotSize.trim() !== "") details.push("Plot size: " + plotSize.trim());
     if (budget.trim() !== "") details.push("Budget: " + budget.trim());
@@ -38,6 +46,7 @@ function Contact() {
         message: fullMessage,
       },
     ]);
+    setSending(false);
     if (error) {
       setError("Could not send your enquiry.");
       setSaveFailed(true);
@@ -62,6 +71,12 @@ function Contact() {
           Address: K R Extension, 4th Main Road, Near Shankar Mutt,
           Tiptur 572201
         </p>
+        <iframe
+          title="Unnathi Homes location map"
+          src="https://www.google.com/maps?q=K%20R%20Extension%2C%204th%20Main%20Road%2C%20Near%20Shankar%20Mutt%2C%20Tiptur%20572201&output=embed"
+          className="map-frame"
+          loading="lazy"
+        />
       </section>
 
       <section>
@@ -75,33 +90,45 @@ function Contact() {
           <form onSubmit={handleSubmit}>
             <label>
               Name *
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              <input type="text" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} />
             </label>
             <label>
               Phone *
-              <input type="text" inputMode="numeric" maxLength={10} value={phone} onChange={(e) => setPhone(e.target.value)} />
+              <input type="tel" autoComplete="tel" inputMode="numeric" maxLength={10} value={phone} onChange={(e) => setPhone(e.target.value)} />
             </label>
             <label>
               Place / Location of plot
-              <input type="text" value={place} onChange={(e) => setPlace(e.target.value)} />
+              <input type="text" autoComplete="off" value={place} onChange={(e) => setPlace(e.target.value)} />
             </label>
             <label>
               Type of requirement
-              <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
+              <select value={type} onChange={(e) => setType(e.target.value)}>
+                <option value="">Select a type</option>
+                <option value="G+1 home">G+1 home</option>
+                <option value="Villa">Villa</option>
+                <option value="Renovation">Renovation</option>
+                <option value="Other">Other</option>
+              </select>
             </label>
             <label>
               Plot size
-              <input type="text" value={plotSize} onChange={(e) => setPlotSize(e.target.value)} placeholder="e.g. 30x40" />
+              <input type="text" autoComplete="off" value={plotSize} onChange={(e) => setPlotSize(e.target.value)} placeholder="e.g. 30x40" />
             </label>
             <label>
               Budget range
-              <input type="text" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="e.g. Rs. 30-40 lakh" />
+              <input type="text" autoComplete="off" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="e.g. Rs. 30-40 lakh" />
             </label>
             <label>
               Message
               <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
             </label>
-            <button type="submit">Send Enquiry</button>
+            <div className="honeypot" aria-hidden="true">
+              <label>
+                Website
+                <input type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+              </label>
+            </div>
+            <button type="submit" disabled={sending}>{sending ? "Sending..." : "Send Enquiry"}</button>
             {error && <p>{error}</p>}
             {saveFailed && (
               <p>

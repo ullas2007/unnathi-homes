@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,13 +8,13 @@ function Navbar() {
         <span>HOM<span className="logo-accent">ES</span></span>
       </Link>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/testimonials">Testimonials</Link>
-        <Link to="/contact">Contact Us</Link>
+        <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
+        <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>Services</NavLink>
+        <NavLink to="/projects" className={({ isActive }) => (isActive ? "active" : "")}>Projects</NavLink>
+        <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : "")}>Gallery</NavLink>
+        <NavLink to="/testimonials" className={({ isActive }) => (isActive ? "active" : "")}>Testimonials</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
       </div>
       <a href="tel:+918197050233" className="nav-call">Call: +91 81970 50233</a>
     </nav>
