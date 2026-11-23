@@ -6,14 +6,7 @@ const marqueeText =
 function Home() {
   return (
     <div>
-      <section className="intro">
-        <video className="building-video" autoPlay loop muted playsInline preload="metadata" poster="/building-draw-poster.jpg">
-          <source src="/building-draw.mp4" type="video/mp4" />
-        </video>
-        <a href="#hero" className="intro-arrow" aria-label="Enter homepage">\u2193</a>
-      </section>
-
-      <section className="hero-full" id="hero">
+      <section className="hero-full">
         <img src="https://www.nobroker.in/blog/wp-content/uploads/2023/08/Modern-Minimalism.webp" alt="Modern two-storey house in bright daylight" className="hero-full-img" />
         <div className="hero-overlay">
           <div className="hero-logo">
