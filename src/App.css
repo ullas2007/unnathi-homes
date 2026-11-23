@@ -261,3 +261,13 @@ footer p {
   align-items: center;
   gap: 0.5rem 1.25rem;
 }
+
+/* About card */
+.about-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
