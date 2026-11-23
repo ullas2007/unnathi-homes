@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <section className="hero-full">
-        <img src="https://www.nobroker.in/blog/wp-content/uploads/2023/08/Modern-Minimalism.webp" alt="Modern two-storey house in bright daylight" className="hero-full-img" />
+        <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/ver2/XIwvQlc61t8ZIpanz4mAnTU5mXTv0JniK84Hi2xDB5DKVg/FI-two-storey-house-designs-small-plots_0_1200.jpg" alt="Modern two-storey home with glass balcony at dusk" className="hero-full-img" />
         <div className="hero-overlay">
           <div className="hero-logo">
             UNNATH<span className="logo-accent">i</span>
