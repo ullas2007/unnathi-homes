@@ -60,7 +60,7 @@ function Contact() {
       <h1>Contact Us</h1>
       <p>
         Planning to build? Call us, message us on WhatsApp, or send an
-        enquiry using the form below \u2014 we will get back to you soon.
+        enquiry using the form below — we will get back to you soon.
       </p>
 
       <section>
@@ -68,7 +68,7 @@ function Contact() {
         <p>Phone: <a href="tel:+918197050233">+91 81970 50233</a></p>
         <p>WhatsApp: <a href="https://wa.me/918197050233">Chat on WhatsApp</a></p>
         <p>
-          Unnathi Homes Architect \u2014 K R Extension, 4th Main Road, Near
+          Unnathi Homes Architect — K R Extension, 4th Main Road, Near
           Shankar Mutt, Tiptur 572201 (Plus Code: 7F7C+57)
         </p>
         <iframe
