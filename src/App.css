@@ -271,3 +271,45 @@ footer p {
   max-width: 800px;
   margin: 2rem auto;
 }
+
+/* Page layout: footer stays at the bottom of the page */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Content sections as white cards (all pages, except Home's hero, photo strip and CTA band) */
+section:not(.hero-full):not(.photos):not(.cta) {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Attractive inner text */
+section:not(.hero-full):not(.photos):not(.cta) p {
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+section:not(.hero-full):not(.photos):not(.cta) h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f59e0b;
+  display: inline-block;
+}
+
+/* Form inside a card section: no double border */
+section:not(.hero-full):not(.photos):not(.cta) form {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+}

@@ -14,15 +14,17 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <footer>
         <p>Unnathi Homes, K R Extension, 4th Main Road, Near Shankar Mutt, Tiptur 572201</p>
         <p>Phone: +91 81970 50233</p>
