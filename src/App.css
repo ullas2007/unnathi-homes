@@ -623,19 +623,23 @@ footer .footer-bottom {
   }
 
   .hero-overlay h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .hero-overlay p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .hero-overlay .hero-sub {
+    font-size: 1rem;
   }
 
   .hero-logo {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .cta h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .cta {
@@ -643,7 +647,7 @@ footer .footer-bottom {
   }
 
   .marquee-track {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .photo-row {
@@ -675,7 +679,7 @@ footer .footer-bottom {
   }
 
   .btn {
-    font-size: 1rem;
-    padding: 0.85rem 1.6rem;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.3rem;
   }
 }
