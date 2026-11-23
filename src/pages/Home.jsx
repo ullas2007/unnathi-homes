@@ -14,7 +14,7 @@ function Home() {
             <br />
             HOM<span className="logo-accent">E</span>S
           </div>
-          <h1>We build your dreams.</h1>
+          <h1>We build your dreams...</h1>
           <p className="hero-sub">Homes, villas, renovation, interiors and commercial buildings — in Tiptur, Tumkur district, Bengaluru and Hassan.</p>
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
