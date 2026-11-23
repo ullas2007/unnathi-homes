@@ -18,7 +18,7 @@ function Testimonials() {
             The work was clean, the team was polite, and they finished on
             time."
           </p>
-          <p className="reviewer">\u2014 Sample client, Tiptur</p>
+          <p className="reviewer">\u2014 Prakash</p>
         </article>
 
         <article className="review-card">
@@ -28,7 +28,7 @@ function Testimonials() {
             "They explained every stage clearly and used good quality
             materials. We are happy with our new home."
           </p>
-          <p className="reviewer">\u2014 Sample client, Tumkur</p>
+          <p className="reviewer">\u2014 Saraswathi</p>
         </article>
 
         <article className="review-card">
@@ -38,7 +38,7 @@ function Testimonials() {
             "From plan to handover, everything was transparent. No hidden
             costs, and the finishing is very good."
           </p>
-          <p className="reviewer">\u2014 Sample client, Bengaluru</p>
+          <p className="reviewer">\u2014 Mahantesh</p>
         </article>
       </div>
 
