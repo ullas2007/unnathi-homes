@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
 function Contact() {
@@ -15,6 +16,17 @@ function Contact() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
+  const location = useLocation();
+
+  // Pre-fill from the Cost Estimator (Services page) via navigation state.
+  useEffect(() => {
+    const s = location.state;
+    if (!s) return;
+    if (s.plotSize) setPlotSize(s.plotSize);
+    if (s.type) setType(s.type);
+    if (s.message) setMessage(s.message);
+  }, [location.state]);
+
   async function handleSubmit(e) {
     e.preventDefault();
     if (sending) return;
@@ -28,8 +40,8 @@ function Contact() {
       setError("Please enter your name and phone number.");
       return;
     }
-    if (!/^[0-9]{10}$/.test(phone.trim())) {
-      setError("Please enter a valid 10-digit phone number.");
+    if (!/^[6-9]\d{9}$/.test(phone.trim())) {
+      setError("Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8 or 9).");
       return;
     }
     setSending(true);
@@ -55,6 +67,12 @@ function Contact() {
     setSent(true);
   }
 
+  const waMessage = encodeURIComponent(
+    `Hello Unnathi Homes, I just sent an enquiry on your website.\nName: ${name.trim()}\nPlace: ${place.trim() || "-"}\nHouse type: ${type.trim() || "-"}` +
+      (plotSize.trim() ? `\nPlot size: ${plotSize.trim()}` : "")
+  );
+  const waLink = `https://wa.me/918197050233?text=${waMessage}`;
+
   return (
     <div>
       <h1>Contact Us</h1>
@@ -79,15 +97,32 @@ function Contact() {
           className="map-frame"
           loading="lazy"
         />
+        <p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Unnathi+Homes+Architect%2C+7F7C%2B57+Tiptur%2C+Karnataka"
+            target="_blank"
+            rel="noreferrer"
+            className="btn"
+          >
+            Get Directions
+          </a>
+        </p>
       </section>
 
       <section>
         <h2>Send an enquiry</h2>
         {sent ? (
-          <p>
-            Thank you. Your enquiry has been received. We will contact you
-            soon.
-          </p>
+          <div>
+            <p>
+              Thank you. Your enquiry has been received. We will contact you
+              soon.
+            </p>
+            <p>
+              <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-whatsapp">
+                Send Details on WhatsApp Now
+              </a>
+            </p>
+          </div>
         ) : (
           <form onSubmit={handleSubmit}>
             <label>
