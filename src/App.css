@@ -161,11 +161,12 @@ section + section {
 .hero-logo {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1.1;
   margin: 0 0 1.5rem;
+  text-align: center;
 }
 
 .hero-overlay h1 {
@@ -635,7 +636,7 @@ footer .footer-bottom {
   }
 
   .hero-logo {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 
   /* Mobile hero: show the whole photo (no side cropping) with the text
