@@ -6,8 +6,9 @@ function About() {
       <section className="about-card">
         <h1>About Us</h1>
         <p>
-          Unnathi Homes is a residential construction company in Tiptur.
-          The builder and architect is Ullas.
+          Unnathi Homes is a residential construction company based in
+          Tiptur, building homes across Tumkur district, Bengaluru and
+          Hassan. The builder and architect is Ullas.
         </p>
         <p>
           We build residential houses, including G+1 RCC homes — from
