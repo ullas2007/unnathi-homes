@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const marqueeText =
-  "Tiptur \u2022 Tumkur \u2022 Bengaluru \u2022 Hassan \u2022 G+1 Homes \u2022 Turnkey Construction \u2022 ";
+  "Tiptur \u2022 Tumkur \u2022 Bengaluru \u2022 Hassan \u2022 Homes \u2022 Villas \u2022 Renovation \u2022 Interiors \u2022 Commercial \u2022 Turnkey \u2022 ";
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
             HOM<span className="logo-accent">ES</span>
           </div>
           <h1>We build your dreams.</h1>
-          <p className="hero-sub">Turnkey homes in Tiptur, Tumkur district, Bengaluru and Hassan.</p>
+          <p className="hero-sub">Homes, villas, renovation, interiors and commercial buildings — in Tiptur, Tumkur district, Bengaluru and Hassan.</p>
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
             <a href="https://wa.me/918197050233" className="btn">WhatsApp</a>
