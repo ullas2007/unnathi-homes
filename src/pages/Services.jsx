@@ -13,6 +13,44 @@ function Services() {
       </p>
 
       <section>
+        <p className="eyebrow">What We Build</p>
+        <h2>Services we offer.</h2>
+        <div className="service-grid">
+          <article className="service-card">
+            <img src="/construction1.jpg" alt="Residential house under construction" loading="lazy" />
+            <h3>Residential Construction</h3>
+            <p>We build homes for families \u2014 G+1 houses, from foundation to finishing, on your own plot.</p>
+          </article>
+          <article className="service-card">
+            <img src="/home-night.jpg" alt="Modern villa at twilight" loading="lazy" />
+            <h3>Villas</h3>
+            <p>Spacious independent villas with modern design, built for comfortable family living.</p>
+          </article>
+          <article className="service-card">
+            <img src="/interior2.jpg" alt="Renovated home interior" loading="lazy" />
+            <h3>Renovation</h3>
+            <p>We renovate and upgrade existing homes \u2014 new rooms, new flooring, a fresh new look.</p>
+          </article>
+          <article className="service-card">
+            <img src="/interior1.jpg" alt="Living room interior with glass staircase" loading="lazy" />
+            <h3>Interiors</h3>
+            <p>Interior work that makes your home feel complete \u2014 flooring, ceilings, kitchens and more.</p>
+          </article>
+          <article className="service-card">
+            <img src="/construction2.webp" alt="Commercial building under construction" loading="lazy" />
+            <h3>Commercial Building</h3>
+            <p>We build shops, offices and commercial spaces \u2014 built to last and ready for business.</p>
+          </article>
+          <article className="service-card">
+            <img src="/hero.jpg" alt="Completed turnkey home" loading="lazy" />
+            <h3>Turnkey Projects</h3>
+            <p>One team handles everything \u2014 design to handover. You get the keys to a finished home.</p>
+          </article>
+        </div>
+        <p className="note">Sample photos for now \u2014 real photos of Unnathi Homes' work coming soon.</p>
+      </section>
+
+      <section>
         <h2>Structure and walls</h2>
         <p>
           Your home stands on a strong RCC frame with wirecut red-brick walls
