@@ -411,13 +411,6 @@ nav {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
-.stars {
-  color: #f59e0b;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
-  margin: 0 0 0.75rem;
-}
-
 .reviewer {
   font-weight: 600;
   color: #1b2a4a;
