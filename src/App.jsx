@@ -47,7 +47,7 @@ function App() {
       <footer>
         <div className="footer-logo">
           <span>UNNATH<span className="logo-accent">i</span></span>
-          <span>HOM<span className="logo-accent">ES</span></span>
+          <span>HOM<span className="logo-accent">E</span>S</span>
         </div>
         <p>Unnathi Homes, K R Extension, 4th Main Road, Near Shankar Mutt, Tiptur 572201</p>
         <p>Phone: +91 81970 50233</p>

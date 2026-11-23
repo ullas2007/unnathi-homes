@@ -12,7 +12,7 @@ function Home() {
           <div className="hero-logo">
             UNNATH<span className="logo-accent">i</span>
             <br />
-            HOM<span className="logo-accent">ES</span>
+            HOM<span className="logo-accent">E</span>S
           </div>
           <h1>We build your dreams.</h1>
           <p className="hero-sub">Homes, villas, renovation, interiors and commercial buildings — in Tiptur, Tumkur district, Bengaluru and Hassan.</p>

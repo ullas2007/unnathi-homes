@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar">
       <Link to="/" className="logo">
         <span>UNNATH<span className="logo-accent">i</span></span>
-        <span>HOM<span className="logo-accent">ES</span></span>
+        <span>HOM<span className="logo-accent">E</span>S</span>
       </Link>
       <div className="nav-links">
         <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
