@@ -48,7 +48,7 @@ function Home() {
             <figcaption>Living room</figcaption>
           </figure>
         </div>
-        <p className="note">Sample photos for now \u2014 real photos of Unnathi Homes' work coming soon.</p>
+        <p className="note">Sample photos for now — real photos of Unnathi Homes' work coming soon.</p>
       </section>
 
       <section className="process">
@@ -63,7 +63,7 @@ function Home() {
           <li>
             <span className="step-num">2</span>
             <h3>Design</h3>
-            <p>We plan your home \u2014 layout, rooms and elevation.</p>
+            <p>We plan your home — layout, rooms and elevation.</p>
           </li>
           <li>
             <span className="step-num">3</span>
@@ -73,7 +73,7 @@ function Home() {
           <li>
             <span className="step-num">4</span>
             <h3>Construction</h3>
-            <p>We build it \u2014 foundation to finishing, one complete work.</p>
+            <p>We build it — foundation to finishing, one complete work.</p>
           </li>
           <li>
             <span className="step-num">5</span>
@@ -85,7 +85,7 @@ function Home() {
 
       <section className="cta">
         <h2>Planning to build your home?</h2>
-        <p>Call us or send an enquiry \u2014 we will get back to you soon.</p>
+        <p>Call us or send an enquiry — we will get back to you soon.</p>
         <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
         <Link to="/contact" className="btn">Get a Free Quote</Link>
       </section>
