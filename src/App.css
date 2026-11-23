@@ -510,27 +510,11 @@ footer .footer-bottom {
   margin-right: auto;
 }
 
-.building-draw {
+.building-video {
   width: 100%;
   max-width: 900px;
   height: auto;
   margin: 1rem auto 0;
   display: block;
-}
-
-.building-draw .draw {
-  fill: none;
-  stroke: #1b2a8c;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw-line 1s ease forwards;
-}
-
-@keyframes draw-line {
-  to {
-    stroke-dashoffset: 0;
-  }
+  border-radius: 16px;
 }

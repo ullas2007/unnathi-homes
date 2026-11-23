@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import BuildingDraw from "../components/BuildingDraw";
 
 const marqueeText =
   "Tiptur \u2022 Tumkur \u2022 Bengaluru \u2022 Hassan \u2022 G+1 Homes \u2022 Turnkey Construction \u2022 ";
@@ -35,7 +34,9 @@ function Home() {
       <section className="building-section">
         <p className="eyebrow">How We Build</p>
         <h2>From foundation to finishing.</h2>
-        <BuildingDraw />
+        <video className="building-video" autoPlay loop muted playsInline preload="metadata" poster="/building-draw-poster.jpg">
+          <source src="/building-draw.mp4" type="video/mp4" />
+        </video>
         <p>Every home, drawn and built with care \u2014 one complete work, from foundation to finishing.</p>
       </section>
 
