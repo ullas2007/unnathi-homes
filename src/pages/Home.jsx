@@ -6,7 +6,11 @@ function Home() {
       <section className="hero-full">
         <img src="/hero.jpg" alt="Modern two-storey house" className="hero-full-img" />
         <div className="hero-overlay">
-          <h1>Unnathi Homes</h1>
+          <h1>
+            UNNATH<span className="logo-accent">i</span>
+            <br />
+            HOM<span className="logo-accent">ES</span>
+          </h1>
           <p>We build your dreams….</p>
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>

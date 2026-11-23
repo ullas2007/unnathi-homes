@@ -313,3 +313,17 @@ section:not(.hero-full):not(.photos):not(.cta) form {
   background: transparent;
   max-width: none;
 }
+
+/* Logo: navy + amber wordmark, like the real Unnathi Homes logo */
+.logo-accent {
+  color: #f59e0b;
+}
+
+nav .logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
