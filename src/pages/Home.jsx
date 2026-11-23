@@ -3,44 +3,43 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <section className="hero">
-        <img src="/hero.jpg" alt="Modern two-storey house" className="hero-img" />
-        <h1>Unnathi Homes</h1>
-        <p>We build your dreams….</p>
-        <p>
-          Residential construction in Tiptur. We build individual houses,
-          including G+1 RCC homes, from foundation to finishing.
-        </p>
-        <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
-        <a href="https://wa.me/918197050233" className="btn">WhatsApp</a>
-        <Link to="/contact" className="btn">Enquire Now</Link>
+      <section className="hero-full">
+        <img src="/hero.jpg" alt="Modern two-storey house" className="hero-full-img" />
+        <div className="hero-overlay">
+          <h1>Unnathi Homes</h1>
+          <p>We build your dreams….</p>
+          <div>
+            <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
+            <a href="https://wa.me/918197050233" className="btn">WhatsApp</a>
+            <Link to="/contact" className="btn">Enquire Now</Link>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2>What we build</h2>
-        <ul>
-          <li>Structure and walls — G+1 RCC homes, wirecut red-brick masonry, TATA Steel 550 grade</li>
-          <li>Water and plumbing — 8,000-litre sump tank, CPVC plumbing with Jaguar / Cera / Parryware fittings</li>
-          <li>Doors, floors and stairs — Teak wood doors, vitrified tile flooring, granite staircase with glass railing</li>
-          <li>Electrical and painting — Havells / V-Guard wiring, Asian Paints Royal emulsion inside, Apex Ultima outside</li>
-          <li>Compound and protection — Compound wall, MS gate, anti-termite treatment</li>
-        </ul>
-        <Link to="/services">See all services</Link>
+      <section className="photos">
+        <h2>Our Work</h2>
+        <div className="photo-row">
+          <figure>
+            <img src="/home-night.jpg" alt="Modern home at twilight" />
+            <figcaption>Modern home</figcaption>
+          </figure>
+          <figure>
+            <img src="/construction1.jpg" alt="Two houses under construction" />
+            <figcaption>House under construction</figcaption>
+          </figure>
+          <figure>
+            <img src="/interior1.jpg" alt="Living room with glass staircase" />
+            <figcaption>Living room</figcaption>
+          </figure>
+        </div>
+        <p className="note">Sample photos for now — real photos of Unnathi Homes' work coming soon.</p>
       </section>
 
-      <section>
-        <h2>Ongoing work</h2>
-        <p>
-          Two G+1 homes at Margondanahalli, Tiptur — 21 ft × 42 ft plot,
-          1,850 sq ft total slab area. Status: Ongoing.
-        </p>
-        <Link to="/projects">See projects</Link>
-      </section>
-
-      <section>
+      <section className="cta">
         <h2>Planning to build your home?</h2>
-        <p>Call us and tell us about your plot.</p>
+        <p>Call us or send an enquiry — we will get back to you soon.</p>
         <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
+        <Link to="/contact" className="btn">Enquire Now</Link>
       </section>
     </div>
   );
