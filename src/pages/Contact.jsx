@@ -59,8 +59,8 @@ function Contact() {
     <div>
       <h1>Contact Us</h1>
       <p>
-        Call us, message us on WhatsApp, or send an enquiry using the form
-        below.
+        Planning to build? Call us, message us on WhatsApp, or send an
+        enquiry using the form below \u2014 we will get back to you soon.
       </p>
 
       <section>

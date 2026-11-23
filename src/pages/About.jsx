@@ -6,15 +6,18 @@ function About() {
       <section className="about-card">
         <h1>About Us</h1>
         <p>
-          Unnathi Homes is a residential construction company based in
-          Tiptur, building homes across Tumkur district, Bengaluru and
+          Unnathi Homes is a construction company based in
+          Tiptur, building across Tumkur district, Bengaluru and
           Hassan. The builder and architect is Ullas.
         </p>
         <p>
-          We build residential houses, including G+1 RCC homes — from
-          foundation to finishing, as one complete work.
+          We do residential construction, villas, renovation, interiors,
+          commercial buildings and turnkey projects. Our main work is G+1
+          RCC homes \u2014 built from foundation to finishing, as one
+          complete work.
         </p>
-        <p>We build your dreams….</p>
+        <p>We build your dreams\u2026.</p>
+        <Link to="/services" className="btn">Our Services</Link>
         <Link to="/contact" className="btn">Contact Us</Link>
       </section>
     </div>
