@@ -134,14 +134,10 @@ section + section {
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
-}
-
-.hero-full-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+  background-image: url("https://img.staticmb.com/mbcontent/images/crop/uploads/ver2/XIwvQlc61t8ZIpanz4mAnTU5mXTv0JniK84Hi2xDB5DKVg/FI-two-storey-house-designs-small-plots_0_1200.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -682,11 +678,12 @@ footer .footer-bottom {
     padding: 0.7rem 1.3rem;
   }
 
-  /* On mobile, when scrolled down, fade the links + Call button out smoothly
-     (no blink) and collapse the bar so only the logo stays */
+  /* On mobile, when scrolled down, the links + Call button fade out fully
+     FIRST (0.25s), and only then does the bar collapse (0.25s delay) — the
+     text is never clipped while still visible, so there is no blink. */
   .navbar .nav-links,
   .navbar .nav-call {
-    transition: opacity 0.25s ease, visibility 0.25s ease, max-height 0.25s ease, margin 0.25s ease;
+    transition: opacity 0.25s ease, max-height 0.25s ease;
     max-height: 120px;
     overflow: hidden;
   }
@@ -694,9 +691,9 @@ footer .footer-bottom {
   .navbar.scrolled .nav-links,
   .navbar.scrolled .nav-call {
     opacity: 0;
-    visibility: hidden;
     max-height: 0;
-    margin: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, max-height 0.25s ease 0.25s;
   }
 
   .navbar.scrolled {
