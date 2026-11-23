@@ -6,7 +6,14 @@ const marqueeText =
 function Home() {
   return (
     <div>
-      <section className="hero-full">
+      <section className="intro">
+        <video className="building-video" autoPlay loop muted playsInline preload="metadata" poster="/building-draw-poster.jpg">
+          <source src="/building-draw.mp4" type="video/mp4" />
+        </video>
+        <a href="#hero" className="intro-arrow" aria-label="Enter homepage">\u2193</a>
+      </section>
+
+      <section className="hero-full" id="hero">
         <img src="https://www.nobroker.in/blog/wp-content/uploads/2023/08/Modern-Minimalism.webp" alt="Modern two-storey house in bright daylight" className="hero-full-img" />
         <div className="hero-overlay">
           <div className="hero-logo">
@@ -30,15 +37,6 @@ function Home() {
           <span>{marqueeText.repeat(3)}</span>
         </div>
       </div>
-
-      <section className="building-section">
-        <p className="eyebrow">How We Build</p>
-        <h2>From foundation to finishing.</h2>
-        <video className="building-video" autoPlay loop muted playsInline preload="metadata" poster="/building-draw-poster.jpg">
-          <source src="/building-draw.mp4" type="video/mp4" />
-        </video>
-        <p>Every home, drawn and built with care \u2014 one complete work, from foundation to finishing.</p>
-      </section>
 
       <section className="photos">
         <p className="eyebrow">Our Work</p>
