@@ -487,3 +487,8 @@ footer .footer-bottom {
     padding: 0.85rem 1.6rem;
   }
 }
+
+/* Our Work heading: centred, like DivyaSree's centred section headings */
+.photos h2 {
+  text-align: center;
+}

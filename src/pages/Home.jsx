@@ -9,12 +9,12 @@ function Home() {
       <section className="hero-full">
         <img src="https://www.nobroker.in/blog/wp-content/uploads/2023/08/Modern-Minimalism.webp" alt="Modern two-storey house in bright daylight" className="hero-full-img" />
         <div className="hero-overlay">
-          <h1>
+          <div className="hero-logo">
             UNNATH<span className="logo-accent">i</span>
             <br />
             HOM<span className="logo-accent">ES</span>
-          </h1>
-          <p>We build your dreams\u2026.</p>
+          </div>
+          <h1>We build your dreams.</h1>
           <p className="hero-sub">Turnkey homes in Tiptur, Tumkur district, Bengaluru and Hassan.</p>
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
@@ -32,7 +32,8 @@ function Home() {
       </div>
 
       <section className="photos">
-        <h2>Our Work</h2>
+        <p className="eyebrow">Our Work</p>
+        <h2>Homes we are building.</h2>
         <div className="photo-row">
           <figure>
             <img src="/home-night.jpg" alt="Modern home at twilight" />
