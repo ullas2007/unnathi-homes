@@ -19,7 +19,7 @@ function Home() {
           <div>
             <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
             <a href="https://wa.me/918197050233" className="btn">WhatsApp</a>
-            <Link to="/contact" className="btn">Enquire Now</Link>
+            <Link to="/contact" className="btn">Get a Free Quote</Link>
           </div>
         </div>
       </section>
@@ -36,26 +36,58 @@ function Home() {
         <h2>Homes we are building.</h2>
         <div className="photo-row">
           <figure>
-            <img src="/home-night.jpg" alt="Modern home at twilight" />
+            <img src="/home-night.jpg" alt="Modern home at twilight" loading="lazy" />
             <figcaption>Modern home</figcaption>
           </figure>
           <figure>
-            <img src="/construction1.jpg" alt="Two houses under construction" />
+            <img src="/construction1.jpg" alt="Two houses under construction" loading="lazy" />
             <figcaption>House under construction</figcaption>
           </figure>
           <figure>
-            <img src="/interior1.jpg" alt="Living room with glass staircase" />
+            <img src="/interior1.jpg" alt="Living room with glass staircase" loading="lazy" />
             <figcaption>Living room</figcaption>
           </figure>
         </div>
         <p className="note">Sample photos for now \u2014 real photos of Unnathi Homes' work coming soon.</p>
       </section>
 
+      <section className="process">
+        <p className="eyebrow">Our Process</p>
+        <h2>How we build your home.</h2>
+        <ol className="process-steps">
+          <li>
+            <span className="step-num">1</span>
+            <h3>Consultation</h3>
+            <p>Tell us about your plot, your budget and what you want to build.</p>
+          </li>
+          <li>
+            <span className="step-num">2</span>
+            <h3>Design</h3>
+            <p>We plan your home \u2014 layout, rooms and elevation.</p>
+          </li>
+          <li>
+            <span className="step-num">3</span>
+            <h3>Approvals</h3>
+            <p>We guide you through plan approval and paperwork.</p>
+          </li>
+          <li>
+            <span className="step-num">4</span>
+            <h3>Construction</h3>
+            <p>We build it \u2014 foundation to finishing, one complete work.</p>
+          </li>
+          <li>
+            <span className="step-num">5</span>
+            <h3>Handover</h3>
+            <p>We hand over your finished home, ready to move in.</p>
+          </li>
+        </ol>
+      </section>
+
       <section className="cta">
         <h2>Planning to build your home?</h2>
         <p>Call us or send an enquiry \u2014 we will get back to you soon.</p>
         <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
-        <Link to="/contact" className="btn">Enquire Now</Link>
+        <Link to="/contact" className="btn">Get a Free Quote</Link>
       </section>
     </div>
   );

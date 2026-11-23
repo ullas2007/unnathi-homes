@@ -493,4 +493,45 @@ footer .footer-bottom {
   text-align: center;
 }
 
-/* ---------- Building line-drawing animation (DivyaSree-style) ---------- */
+/* ---------- Process steps (Home: How we build your home) ---------- */
+.process h2 {
+  text-align: center;
+}
+
+.process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 0;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.process-steps li {
+  text-align: center;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #1b2a8c;
+  color: #ffffff;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.process-steps h3 {
+  margin: 0 0 0.25rem;
+  color: #1b2a8c;
+}
+
+.process-steps p {
+  margin: 0;
+}

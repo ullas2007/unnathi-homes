@@ -6,6 +6,8 @@ function Contact() {
   const [phone, setPhone] = useState("");
   const [place, setPlace] = useState("");
   const [type, setType] = useState("");
+  const [plotSize, setPlotSize] = useState("");
+  const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [saveFailed, setSaveFailed] = useState(false);
@@ -23,13 +25,17 @@ function Contact() {
       setError("Please enter a valid 10-digit phone number.");
       return;
     }
+    const details = [];
+    if (plotSize.trim() !== "") details.push("Plot size: " + plotSize.trim());
+    if (budget.trim() !== "") details.push("Budget: " + budget.trim());
+    const fullMessage = [...details, message.trim()].filter(Boolean).join(" | ");
     const { error } = await supabase.from("enquiries").insert([
       {
         name: name.trim(),
         phone: phone.trim(),
         place: place.trim(),
         type: type.trim(),
-        message: message.trim(),
+        message: fullMessage,
       },
     ]);
     if (error) {
@@ -82,6 +88,14 @@ function Contact() {
             <label>
               Type of requirement
               <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
+            </label>
+            <label>
+              Plot size
+              <input type="text" value={plotSize} onChange={(e) => setPlotSize(e.target.value)} placeholder="e.g. 30x40" />
+            </label>
+            <label>
+              Budget range
+              <input type="text" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="e.g. Rs. 30-40 lakh" />
             </label>
             <label>
               Message
