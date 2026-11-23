@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Ballpark per-sq-ft rates (Rs). Standard matches Unnathi Homes' current
-// agreement rate of about Rs. 2,030 per sq ft. Anna should confirm these
-// tiers before the site is handed over.
+// Ballpark per-sq-ft rates (Rs) by material quality. The price depends on
+// the materials the client chooses: low quality, medium, or high end.
+// Medium matches Unnathi Homes' current agreement rate of about
+// Rs. 2,030 per sq ft. Anna should confirm these rates before handover.
 const RATES = {
-  Basic: 1650,
-  Standard: 2050,
-  Premium: 2550,
+  "Low Quality Materials": 1650,
+  "Medium Quality Materials": 2050,
+  "High End Materials": 2550,
 };
 
 const FLOORS = { "G (Ground only)": 1, "G+1": 2, "G+2": 3 };
@@ -32,7 +33,7 @@ function inr(n) {
 function CostEstimator() {
   const [plot, setPlot] = useState("");
   const [floorKey, setFloorKey] = useState("G+1");
-  const [tier, setTier] = useState("Standard");
+  const [tier, setTier] = useState("Medium Quality Materials");
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ function CostEstimator() {
     const type = floorKey === "G+1" ? "G+1 home" : "";
     const message =
       `Cost estimate (ballpark): ${inr(result.low)} - ${inr(result.high)}` +
-      ` | Plot: ${result.plotSqft} sq.ft | Floors: ${floorKey} | Package: ${tier}` +
+      ` | Plot: ${result.plotSqft} sq.ft | Floors: ${floorKey} | Materials: ${tier}` +
       ` | Built-up area: about ${result.builtUp.toLocaleString("en-IN")} sq.ft @ Rs. ${result.rate.toLocaleString("en-IN")} per sq.ft.`;
     navigate("/contact", { state: { plotSize: String(result.plotSqft) + " sq.ft", type, message } });
   }
@@ -70,9 +71,10 @@ function CostEstimator() {
       <p className="eyebrow">Cost Estimator</p>
       <h2>How much will your home cost?</h2>
       <p>
-        Enter your plot size, floors and package to see a ballpark cost. This
-        is an indicative range only — the exact quote depends on your plot,
-        design and materials.
+        Enter your plot size, floors and materials to see a ballpark cost.
+        The price depends on the materials you choose — low quality, medium,
+        or high end. This is an indicative range only; the exact quote
+        depends on your plot, design and materials.
       </p>
       <form onSubmit={handleCalculate}>
         <label>
@@ -88,7 +90,7 @@ function CostEstimator() {
           </select>
         </label>
         <label>
-          Package
+          Materials
           <select value={tier} onChange={(e) => setTier(e.target.value)}>
             {Object.keys(RATES).map((k) => (
               <option key={k} value={k}>{k} — Rs. {RATES[k].toLocaleString("en-IN")} per sq.ft</option>
@@ -105,7 +107,7 @@ function CostEstimator() {
           </p>
           <p>
             Built-up area about {result.builtUp.toLocaleString("en-IN")} sq.ft
-            ({result.plotSqft.toLocaleString("en-IN")} sq.ft plot x {result.floors} floor{result.floors > 1 ? "s" : ""} x {tier} package @ Rs. {result.rate.toLocaleString("en-IN")} per sq.ft).
+            ({result.plotSqft.toLocaleString("en-IN")} sq.ft plot x {result.floors} floor{result.floors > 1 ? "s" : ""} x {tier} @ Rs. {result.rate.toLocaleString("en-IN")} per sq.ft).
           </p>
           <p>
             <button type="button" className="btn" onClick={handleQuote}>Get Exact Quote</button>
