@@ -13,8 +13,8 @@ function Testimonials() {
       <section>
         <h2>Planning to build your home?</h2>
         <p>Call us and tell us about your plot.</p>
-        <a href="tel:+918197050233">Call: +91 81970 50233</a>
-        <Link to="/contact">Enquire Now</Link>
+        <a href="tel:+918197050233" className="btn">Call: +91 81970 50233</a>
+        <Link to="/contact" className="btn">Enquire Now</Link>
       </section>
     </div>
   );
