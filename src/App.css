@@ -392,3 +392,53 @@ nav {
     transform: translateX(-50%);
   }
 }
+
+/* Review cards */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.sample-tag {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin: 0 0 0.75rem;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.75rem;
+}
+
+.reviewer {
+  font-weight: 600;
+  color: #1b2a4a;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .reviews {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
