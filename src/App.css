@@ -492,3 +492,45 @@ footer .footer-bottom {
 .photos h2 {
   text-align: center;
 }
+
+/* ---------- Building line-drawing animation (DivyaSree-style) ---------- */
+.building-section {
+  background: #f2f2f2;
+  max-width: none;
+  text-align: center;
+}
+
+.building-section h2 {
+  text-align: center;
+}
+
+.building-section p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.building-draw {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 1rem auto 0;
+  display: block;
+}
+
+.building-draw .draw {
+  fill: none;
+  stroke: #1b2a8c;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-line 1s ease forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
