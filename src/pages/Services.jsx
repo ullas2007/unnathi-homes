@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CostEstimator from "../components/CostEstimator";
 
 function Services() {
   return (
@@ -94,6 +95,8 @@ function Services() {
           </article>
         </div>
       </section>
+
+      <CostEstimator />
 
       <section>
         <h2>Planning to build your home?</h2>

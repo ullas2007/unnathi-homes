@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Gallery from "./pages/Gallery";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 import "./App.css";
 
 const TITLES = {
@@ -18,6 +19,7 @@ const TITLES = {
   "/gallery": "Gallery — Unnathi Homes",
   "/testimonials": "Testimonials — Unnathi Homes",
   "/contact": "Contact Us — Unnathi Homes",
+  "/admin": "Admin — Unnathi Homes",
 };
 
 function PageTitle() {
@@ -42,6 +44,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
       <footer>
