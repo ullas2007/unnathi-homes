@@ -132,19 +132,23 @@ section + section {
   padding: 0;
   margin: 0;
   position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .hero-full-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 100vh;
-  min-height: 500px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
   background: rgba(10, 23, 64, 0.35);
   display: flex;
   flex-direction: column;
@@ -516,7 +520,22 @@ footer .footer-bottom {
   }
 
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .service-card img {
+    height: 120px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+    margin: 0.75rem 0.75rem 0.25rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    margin: 0 0.75rem 0.75rem;
   }
 
   .btn {
@@ -576,7 +595,7 @@ footer .footer-bottom {
 /* ---------- Service cards (Services: What we build) ---------- */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 1140px;
   margin: 2rem auto 0;
